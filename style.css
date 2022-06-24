@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+h2, p {
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+h3 {
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+main {
+
+    font-family: "Poppins", sans-serif;
+    /* should take up the full space of the monitor */
+    min-height: 100vh;
+
+    /* create a linear gradient from bottom-left to top-right */
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+
+    /* makes the HTML elements (=content) horizontal alignment*/
+    display: flex;
+
+    /* aligns the white box in the centre of the page */
+    align-items: center;
+    justify-content: center;
+}
+
+.glass {
+    background: white;
+    min-height: 80vh;
+    width: 60%;
+
+    /* create a linear gradient from top-left to bottom-right | the rgba = colour and opacity */
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+
+    /* makes the rounded edges */
+    border-radius: 2rem;
+
+    /* moving the glass rectangle forward on the z axis; default z axis is 1 */
+    z-index: 2;
+
+    /* add the blur effect */
+    backdrop-filter: blur(2rem);
+
+    display: flex;
+}
+
+
+.circle1, .circle2 {
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+
+    /* creates the circle ; the height and width must be the same for this to work */
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: 5%;
+    right: 15%;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+}
+
+.dashboard {
+    flex: 1;
+
+    /* algin the contents of dashboard horizontally */
+    display: flex;
+
+    /* then change the direction back to vertical alignment */
+    flex-direction: column;
+
+    /* align the contents based on centre alignment */
+    align-items: center;
+
+    /* space the contens evenly */
+    justify-content: space-evenly;
+
+    /* align the text at centre */
+    text-align: center;
+
+    /* create a linear gradient from top-left to bottom-right | the rgba = colour and opacity */
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+
+    border-radius: 2rem;
+}
+
+.link {
+    display: flex;
+
+    /* add spacing between link items */
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+
+    /* align the times to the center of the div block*/
+    align-items: center;
+}
+.link h2 {
+    padding: 0rem 2rem;
+
+}
+
+.games{
+    flex: 2;
+}
+
+.pro {
+    /* create a linear gradient from bottom-left to top-right */
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+
+    border-radius: 2rem;
+
+    /* changes the text colour */
+    color: white;
+
+    padding: 1rem;
+
+    position: relative;
+}
+
+.pro img {
+    /* moves the image based on .pro's size; b/c .pro's position is now relative */
+    position: absolute;
+    top: -10%;
+    right: 10%;
+}
+
+.pro h2 {
+    width: 40%;
+    color: white;
+    font-weight: 600;
+}
+
+
+/* GAMES SECTION */
+
+.status {
+    margin-bottom: 3rem;
+}
+
+/* status input means the search bar */
+.status input {
+
+    /* create a linear gradient from top-left to bottom-right | the rgba = colour and opacity */
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+
+    /* removes search bar boarder */
+    border: none;
+
+    width: 50%;
+
+    padding: 0.5rem;
+
+    border-radius: 2rem;
+}
+
+.games {
+
+    margin: 5rem;
+
+    display: flex;
+
+    flex-direction: column;
+    
+    justify-content: space-evenly;
+}
+
+.single-card {
+    display: flex;
+
+    background: linear-gradient(to left top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+
+    border-radius: 1rem;
+
+    margin: 2rem 0rem;
+
+    padding: 2rem;
+
+    /* apply one or more shadows to an element; horizontal shadow | vertical shadow | amt of blur */
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+
+    /* add space between all of the elements */
+    justify-content: space-between;
+}
+
+/* the progress bar */
+.progress {
+    /* create a linear gradient from bottom-left to top-right */
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+
+    width: 100%;
+
+    height: 25%;
+
+    border-radius: 1rem;
+
+    position: relative;
+
+    /* the grey bar is hidden if it goes outside of the progress bar boundary*/
+    overflow: hidden;
+}
+
+/* pretty much created a div */
+.progress::after {
+    content: "";
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgb(236, 236, 236);
+
+    position: absolute;
+
+    left: 60%;
+}
+
+.card-info {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.percentage {
+    font-weight: bold;
+
+    /* create a linear gradient from bottom-left to top-right */
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+
+    /* apply the linar gradient to the text */
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
