@@ -2,46 +2,52 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: small;
 }
 
 h1 {
-    color: #426696;
+    color: #E05297;
     font-weight: 600;
     font-size: 3rem;
     opacity: 0.8;
 }
 
 h2, p {
-    color: #658ec6;
+    color: #EA86B6;
     font-weight: 500;
     opacity: 0.8;
 }
 
 h3 {
-    color: #426696;
+    color: #E05297;
     font-weight: 600;
     opacity: 0.8;
 }
 
+
 main {
 
     font-family: "Poppins", sans-serif;
+
     /* should take up the full space of the monitor */
     min-height: 100vh;
 
     /* create a linear gradient from bottom-left to top-right */
-    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    background: linear-gradient(to right top, #EA86B6, #FCEEF5);
 
     /* makes the HTML elements (=content) horizontal alignment*/
     display: flex;
 
     /* aligns the white box in the centre of the page */
     align-items: center;
+
     justify-content: center;
 }
 
+/* The glass card */
 .glass {
     background: white;
+
     min-height: 80vh;
     width: 60%;
 
@@ -60,16 +66,22 @@ main {
     display: flex;
 }
 
-
+/* The two circles in the background */
 .circle1, .circle2 {
     background: white;
+
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    
     height: 20rem;
     width: 20rem;
+
     position: absolute;
 
     /* creates the circle ; the height and width must be the same for this to work */
     border-radius: 50%;
+
+    box-shadow: 8px 8px 10px rgba(122, 122, 122, 0.3);;
+    
 }
 
 .circle1 {
@@ -82,6 +94,7 @@ main {
     left: 10%;
 }
 
+/* the left colum with my image links */
 .dashboard {
     flex: 1;
 
@@ -107,29 +120,22 @@ main {
 }
 
 .link {
-    display: flex;
 
     /* add spacing between link items */
-    margin: 2rem 0rem;
-    padding: 1rem 5rem;
-
-    /* align the times to the center of the div block*/
-    align-items: center;
-}
-.link h2 {
-    padding: 0rem 2rem;
-
+    margin: 0.5rem 0rem;
+    padding: 0.5rem 2rem;
+ 
 }
 
-.games{
-    flex: 2;
-}
 
-.pro {
+/* the "let's get in contact" button */
+.contact {
     /* create a linear gradient from bottom-left to top-right */
-    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    background: linear-gradient(to right top, #EA86B6, #FCEEF5);
 
     border-radius: 2rem;
+
+    box-shadow: 6px 6px 10px rgba(122, 122, 122, 0.2);
 
     /* changes the text colour */
     color: white;
@@ -139,24 +145,27 @@ main {
     position: relative;
 }
 
-.pro img {
-    /* moves the image based on .pro's size; b/c .pro's position is now relative */
+.contact img {
+
+    width: 30%;
+
+    /* moves the image based on .contact's size; b/c .contact's position is now relative */
     position: absolute;
-    top: -10%;
+
+    top: 20%;
     right: 10%;
 }
 
-.pro h2 {
+.contact h2 {
     width: 40%;
     color: white;
     font-weight: 600;
 }
 
-
 /* GAMES SECTION */
 
 .status {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 /* status input means the search bar */
@@ -172,18 +181,22 @@ main {
 
     padding: 0.5rem;
 
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 .games {
-
-    margin: 5rem;
+    flex: 2;
+    margin: 2rem;
 
     display: flex;
 
     flex-direction: column;
     
     justify-content: space-evenly;
+}
+
+.single-card img {
+    width: 15%;
 }
 
 .single-card {
@@ -193,9 +206,9 @@ main {
 
     border-radius: 1rem;
 
-    margin: 2rem 0rem;
+    margin: 1rem 0rem;
 
-    padding: 2rem;
+    padding: 1rem;
 
     /* apply one or more shadows to an element; horizontal shadow | vertical shadow | amt of blur */
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
@@ -207,9 +220,9 @@ main {
 /* the progress bar */
 .progress {
     /* create a linear gradient from bottom-left to top-right */
-    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    background: linear-gradient(to right top, #EA86B6, #FCEEF5);
 
-    width: 100%;
+    width: 300px;
 
     height: 25%;
 
@@ -229,11 +242,22 @@ main {
 
     height: 100%;
 
-    background: rgb(236, 236, 236);
+    background: rgba(236, 236, 236, 0.8);
 
     position: absolute;
+}
 
-    left: 60%;
+/* how much to fill up the progress bars */
+#p1.progress::after {
+    left: 50%;
+}
+
+#p2.progress::after {
+    left: 42%;
+}
+
+#p3.progress::after {
+    left: 0%;
 }
 
 .card-info {
@@ -248,10 +272,9 @@ main {
     font-weight: bold;
 
     /* create a linear gradient from bottom-left to top-right */
-    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    background: #E05297;
 
     /* apply the linar gradient to the text */
     -webkit-background-clip: text;
-
     -webkit-text-fill-color: transparent;
 }
